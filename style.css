@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  /* шрифти берем з макету */
+  font-style: normal;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 700px;
+  /* максимальна ширина береться з макету */
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.todo__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.todo__form {
+  display: flex;
+  margin-bottom: 20px;
+}
+.todo__input {
+  flex-grow: 1;
+  padding: 5px 10px;
+  margin-right: 20px;
+}
+.todo__btn {
+  padding: 5px 10px;
+  background-color: #0ef33c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.todo__list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+.todo__list input[type="checkbox"] {
+  margin-right: 10px;
+}
+.todo__list span {
+  flex-grow: 1;
+}
