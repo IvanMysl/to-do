@@ -81,3 +81,7 @@ body {
 .todo__list span {
   flex-grow: 1;
 }
+.span{
+  text-decoration: line-through;
+  text-decoration-color: red;
+}

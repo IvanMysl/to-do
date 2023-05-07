@@ -24,7 +24,7 @@ addBtn.addEventListener("click", (e) => {
 
     const li = document.createElement("li");
     li.innerHTML = `
-    <input type='checkbox'/>
+    <input type='checkbox' ${todo.completed ? "checked" : ""}/>
     <span>${todoInput.value}</span>
     <button>Видалити</button>`;
 
@@ -42,5 +42,11 @@ todoList.addEventListener("click", (e) => {
     savedTodos.splice(index, 1);
     localStorage.setItem("todos", JSON.stringify(savedTodos));
     li.remove();
+  } else if (e.target.tagName === "INPUT") {
+    const li = e.target.parentNode;
+    const index = Array.prototype.indexOf.call(todoList.children, li);
+    savedTodos[index].completed = e.target.checked;
+    li.classList.toggle("span")
+    localStorage.setItem("todos", JSON.stringify(savedTodos))
   }
 });
